@@ -53,6 +53,21 @@ azureCredentials.json
 # Logs
 *.log
 
+# Local .terraform directory (contains provider binaries)
+.terraform/
+
+# Terraform lock file (optional, but some prefer to exclude it)
+.terraform.lock.hcl
+
+# State files (SENSITIVE - Contains secrets in plain text)
+*.tfstate
+*.tfstate.*
+errored.tfstate
+
+# Variables file (SENSITIVE - if it contains passwords/keys)
+terraform.tfvars
+*.tfvars
+
 # Bash scripts cache
 #############################
 *.sh.~
@@ -62,3 +77,8 @@ azureCredentials.json
 *.bak
 *.backup
 *~
+
+# SSH Keys (NEVER commit these)
+key.pub
+*.pem
+*.key
